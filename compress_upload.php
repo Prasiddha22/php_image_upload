@@ -15,13 +15,15 @@ if (isset($_FILES['image'])) {
 
     // if (move_uploaded_file($image_tmp_name, "images/$imageNewName")) {
     if (compress_image($image_tmp_name, "images/$imageNewName", 10)) {
-        echo "Image uploaded successfully";
+        $response = ['success' => true, 'message' => 'Image uploaded successfully'];
     } else {
-        echo "There was an error uploading image";
+        $response = ['success' => false, 'message' => 'There was an error uploading image'];
     }
 } else {
-    echo "No image selected";
+    $response = ['success' => false, 'message' => 'No Images Selected!'];
 }
+
+echo json_encode($response);
 
 function compress_image($src, $dest, $quality)
 {

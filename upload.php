@@ -14,10 +14,12 @@ if (isset($_FILES['image'])) {
     $imageNewName = $image_first_name . '-' . uniqid() . '.' . $image_ext;
 
     if (move_uploaded_file($image_tmp_name, "images/$imageNewName")) {
-        echo "Image uploaded successfully";
+        $response = ['success' => true, 'message' => 'Image uploaded successfully'];
     } else {
-        echo "There was an error uploading image";
+        $response = ['success' => false, 'message' => 'There was an error uploading image'];
     }
 } else {
-    echo "No image selected";
+    $response = ['success' => false, 'message' => 'No Images Selected!'];
 }
+
+echo json_encode($response);
