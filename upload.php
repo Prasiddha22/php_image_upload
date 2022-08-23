@@ -21,6 +21,7 @@ if (isset($_FILES['image'])) {
     // Create a new name of the image file
     $imageNewName = $image_first_name . '-' . uniqid() . '.' . $image_ext;
 
+    // Upload the file to the images folder in the server
     if (move_uploaded_file($image_tmp_name, "images/$imageNewName")) {
         $response = ['success' => true, 'message' => 'Image uploaded successfully'];
     } else {
