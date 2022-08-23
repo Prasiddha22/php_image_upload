@@ -18,6 +18,7 @@ if (isset($_FILES['image'])) {
     // Store the image extension
     $image_ext = strtolower(end($image_ext));
 
+    // Create a new name of the image file
     $imageNewName = $image_first_name . '-' . uniqid() . '.' . $image_ext;
 
     if (move_uploaded_file($image_tmp_name, "images/$imageNewName")) {
