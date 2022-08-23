@@ -10,10 +10,12 @@ if (isset($_FILES['image'])) {
     // Store image temp name
     $image_tmp_name = $image['tmp_name'];
 
-    // Store the image extension
+    // Split name and extensions
     $image_ext = explode('.', $image_name);
     // Store the name of the image
     $image_first_name = $image_ext[0];
+
+    // Store the image extension
     $image_ext = strtolower(end($image_ext));
 
     $imageNewName = $image_first_name . '-' . uniqid() . '.' . $image_ext;
