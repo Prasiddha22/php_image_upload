@@ -26,6 +26,7 @@ if (isset($_FILES['image'])) {
         // send the suitable response
         $response = ['success' => true, 'message' => 'Image uploaded successfully'];
     } else {
+        // send the suitable response
         $response = ['success' => false, 'message' => 'There was an error uploading image'];
     }
 } else {
