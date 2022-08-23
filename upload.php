@@ -23,6 +23,7 @@ if (isset($_FILES['image'])) {
 
     // Upload the file to the images folder in the server
     if (move_uploaded_file($image_tmp_name, "images/$imageNewName")) {
+        // send the suitable response
         $response = ['success' => true, 'message' => 'Image uploaded successfully'];
     } else {
         $response = ['success' => false, 'message' => 'There was an error uploading image'];
