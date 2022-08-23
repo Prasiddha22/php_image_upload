@@ -34,4 +34,5 @@ if (isset($_FILES['image'])) {
     $response = ['success' => false, 'message' => 'No Images Selected!'];
 }
 
+// Send the response in the json format
 echo json_encode($response);
