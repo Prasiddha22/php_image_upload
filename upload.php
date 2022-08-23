@@ -1,5 +1,6 @@
 <?php
 
+// Check if the image is received or not
 if (isset($_FILES['image'])) {
 
     $image = $_FILES['image'];
