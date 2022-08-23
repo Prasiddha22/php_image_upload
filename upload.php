@@ -30,6 +30,7 @@ if (isset($_FILES['image'])) {
         $response = ['success' => false, 'message' => 'There was an error uploading image'];
     }
 } else {
+    // send the suitable response
     $response = ['success' => false, 'message' => 'No Images Selected!'];
 }
 
