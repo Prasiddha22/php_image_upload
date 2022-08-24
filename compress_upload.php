@@ -2,8 +2,9 @@
 
 // Check if the image is received or not
 if (isset($_FILES['image'])) {
-
+    // Store the received image details in variable
     $image = $_FILES['image'];
+
     $image_name = $image['name'];
     $image_tmp_name = $image['tmp_name'];
 
