@@ -4,7 +4,7 @@
 if (isset($_FILES['image'])) {
     // Store the received image details in variable
     $image = $_FILES['image'];
-
+    // Store image name
     $image_name = $image['name'];
     $image_tmp_name = $image['tmp_name'];
 
