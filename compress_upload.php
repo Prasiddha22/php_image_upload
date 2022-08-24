@@ -9,7 +9,7 @@ if (isset($_FILES['image'])) {
     // Store image temp name
     $image_tmp_name = $image['tmp_name'];
 
-
+    // Split name and extensions
     $image_ext = explode('.', $image_name);
     $image_first_name = $image_ext[0];
     $image_ext = strtolower(end($image_ext));
