@@ -6,6 +6,7 @@ if (isset($_FILES['image'])) {
     $image = $_FILES['image'];
     // Store image name
     $image_name = $image['name'];
+    // Store image temp name
     $image_tmp_name = $image['tmp_name'];
 
 
